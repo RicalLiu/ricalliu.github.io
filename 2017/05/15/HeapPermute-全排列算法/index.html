@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2017 | Rical&#39;s Notes</title>
+  <title>HeapPermute 全排列算法 | Rical&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A BLOG FOR ME TO RECORD MY VIEW">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Rical&#39;s Notes">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="伪代码：123456789101112HeapPermute(n)//实现生成数组全排列的Heap算法//输入：数组长度，正整数；数组A//输出：A的全排列if n = 1    write Aelse    for i ←1 to n do	HeapPermute(n-1)	if n is odd	    swap A[1]and A[n]	else swap A[i]and A[n] 分析：n">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HeapPermute 全排列算法">
+<meta property="og:url" content="http://yoursite.com/2017/05/15/HeapPermute-全排列算法/index.html">
 <meta property="og:site_name" content="Rical&#39;s Notes">
-<meta property="og:description" content="A BLOG FOR ME TO RECORD MY VIEW">
+<meta property="og:description" content="伪代码：123456789101112HeapPermute(n)//实现生成数组全排列的Heap算法//输入：数组长度，正整数；数组A//输出：A的全排列if n = 1    write Aelse    for i ←1 to n do	HeapPermute(n-1)	if n is odd	    swap A[1]and A[n]	else swap A[i]and A[n] 分析：n">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-05-15T06:56:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rical&#39;s Notes">
-<meta name="twitter:description" content="A BLOG FOR ME TO RECORD MY VIEW">
+<meta name="twitter:title" content="HeapPermute 全排列算法">
+<meta name="twitter:description" content="伪代码：123456789101112HeapPermute(n)//实现生成数组全排列的Heap算法//输入：数组长度，正整数；数组A//输出：A的全排列if n = 1    write Aelse    for i ←1 to n do	HeapPermute(n-1)	if n is odd	    swap A[1]and A[n]	else swap A[i]and A[n] 分析：n">
   
     <link rel="alternate" href="/atom.xml" title="Rical&#39;s Notes" type="application/atom+xml">
   
@@ -67,172 +69,71 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/09/28/hello-world/" class="archive-article-date">
-  <time datetime="2017-09-28T05:19:45.461Z" itemprop="datePublished">9月 28</time>
+        <section id="main"><article id="post-HeapPermute-全排列算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/15/HeapPermute-全排列算法/" class="article-date">
+  <time datetime="2017-05-15T09:08:24.000Z" itemprop="datePublished">2017-05-15</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/28/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      HeapPermute 全排列算法
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/27/Ubuntu-16-04-访问暗网/" class="archive-article-date">
-  <time datetime="2017-05-27T14:05:07.000Z" itemprop="datePublished">5月 27</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/27/Ubuntu-16-04-访问暗网/">Ubuntu 16.04 访问暗网</a>
-    </h1>
-  
+        <p><strong>伪代码</strong>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">HeapPermute(n)</div><div class="line">//实现生成数组全排列的Heap算法</div><div class="line">//输入：数组长度，正整数；数组A</div><div class="line">//输出：A的全排列</div><div class="line">if n = 1</div><div class="line">    write A</div><div class="line">else</div><div class="line">    for i ←1 to n do</div><div class="line">	HeapPermute(n-1)</div><div class="line">	if n is odd</div><div class="line">	    swap A[1]and A[n]</div><div class="line">	else swap A[i]and A[n]</div></pre></td></tr></table></figure></p>
+<p><strong>分析</strong>：<br>n = 1时，显然成立；<br>n = 2时，交换位置输出，显然成立；<br>n = 3时：</p>
+<ul>
+<li>第一次循环，HP（2）将数组前两位排列，第三位不动，有xyz，yxz。然后首位交换，有zxy；</li>
+<li>第二次循环，HP（2）再次排列前两位，有zxy，xzy。然后首位交换有yzx；</li>
+<li>第三次交换，HP（2）再次排列前两位，有yzx，zyx。最后交换得xyz。<br>n=4时：<br>四次循环，次次对前三位全排列，共4次……</li>
+</ul>
+<p>数学归纳法易证该算法对目标数组进行全排列。</p>
+<p><strong>时间效率</strong>：<br>对任意数组进行全排列，共有n（n-1）种可能。即进行n（n-1）次输出。初次输出之前不交换。最后一次输出之后交换。<br>故进行n（n-1）次交换，所以时间效率为n（n-1）近似为n^2.</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/17/Forza-Juventus/" class="archive-article-date">
-  <time datetime="2017-05-17T15:00:21.000Z" itemprop="datePublished">5月 17</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/17/Forza-Juventus/">Forza Juventus</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/15/HeapPermute-全排列算法/" class="archive-article-date">
-  <time datetime="2017-05-15T09:08:24.000Z" itemprop="datePublished">5月 15</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/15/HeapPermute-全排列算法/" data-id="cj841irbd0003do9wrm8bsoio" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/HeapPermute-全排列算法/">HeapPermute 全排列算法</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/07/Ubuntu-16-04-安装-Pycharm/" class="archive-article-date">
-  <time datetime="2017-05-07T13:02:04.000Z" itemprop="datePublished">5月 7</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/07/Ubuntu-16-04-安装-Pycharm/">Ubuntu 16.04 安装 Pycharm</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/05/Ubuntu16-04安装MySQL/" class="archive-article-date">
-  <time datetime="2017-05-05T02:09:01.000Z" itemprop="datePublished">5月 5</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/05/Ubuntu16-04安装MySQL/">Ubuntu16.04安装MySQL</a>
-    </h1>
+    <a href="/2017/05/17/Forza-Juventus/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Forza Juventus
+        
+      </div>
+    </a>
   
+  
+    <a href="/2017/05/07/Ubuntu-16-04-安装-Pycharm/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Ubuntu 16.04 安装 Pycharm</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/28/Ubuntu16.04简单配置/" class="archive-article-date">
-  <time datetime="2017-04-28T14:53:17.000Z" itemprop="datePublished">4月 28</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/28/Ubuntu16.04简单配置/">Ubuntu 16.04 LTS 简单配置</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/25/Ubuntu-搭建个人博客/" class="archive-article-date">
-  <time datetime="2017-04-25T13:51:34.000Z" itemprop="datePublished">4月 25</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/25/Ubuntu-搭建个人博客/">Ubuntu 搭建个人博客</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
 </section>
         
