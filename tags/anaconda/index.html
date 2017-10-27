@@ -8,10 +8,10 @@
   <meta name="description" content="">
   <meta name="author" content="Rical Liu">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="HeapPermute 全排列算法"/>
+  <meta property="og:title" content="Rical&#39;s Notes"/>
   <meta property="og:description" content="A BLOG FOR ME TO RECORD MY VIEW" />
   <meta property="og:site_name" content="Rical&#39;s Notes"/>
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:image" content="http://yoursite.com"/>
   
     <link rel="alternate" href="/atom.xml" title="Rical&#39;s Notes" type="application/atom+xml">
@@ -35,7 +35,8 @@
 </head>
 
   <body>
-    <!-- Page Header -->
+    <!-- Archive Header -->
+<!-- Page Header -->
 
 
 <header class="site-header header-background" style="background-image: url(/img/default-banner-light.jpg)">
@@ -43,7 +44,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">HeapPermute 全排列算法</p>
+          <p class="title">Blog Archives</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -89,49 +90,34 @@
 </header>
 
 
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          
-            <!-- Author -->
-            <span class="author info">By Rical Liu</span>
-          
-          <!-- Date -->
-          <span class="date-time info">On
-            <span class="date">2017-05-15</span>
-            <span class="time">22:39:11</span>
-          </span>
-          
-        </div>
-        <!-- Tags -->
-        
-          <div class="post-tags text-muted">
-            Tags: 
+<!-- Archive List -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      
+        <div class="archive-item">
+  <a href="/2017/10/27/Sublime-Text-3-配置-Anaconda/" class="post-title">
+    Sublime Text 3 配置 Anaconda
+  </a>
+  <div class="date text-muted">Posted on 2017-10-27 22:10:51</div>
+</div>
 
-<a class="tag" href="/tags/算法/">#算法</a>
+      
 
-
-          </div>
-        
-        <!-- Post Main Content -->
-        <div class="post-content">
-          <p><strong>伪代码</strong>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">HeapPermute(n)</div><div class="line">//实现生成数组全排列的Heap算法</div><div class="line">//输入：数组长度，正整数；数组A</div><div class="line">//输出：A的全排列</div><div class="line">if n = 1</div><div class="line">    write A</div><div class="line">else</div><div class="line">    for i ←1 to n do</div><div class="line">	HeapPermute(n-1)</div><div class="line">	if n is odd</div><div class="line">	    swap A[1]and A[n]</div><div class="line">	else swap A[i]and A[n]</div></pre></td></tr></table></figure></p>
-<p><strong>分析</strong>：<br>n = 1时，显然成立；<br>n = 2时，交换位置输出，显然成立；<br>n = 3时：</p>
-<ul>
-<li>第一次循环，HP（2）将数组前两位排列，第三位不动，有xyz，yxz。然后首位交换，有zxy；</li>
-<li>第二次循环，HP（2）再次排列前两位，有zxy，xzy。然后首位交换有yzx；</li>
-<li>第三次交换，HP（2）再次排列前两位，有yzx，zyx。最后交换得xyz。<br>n=4时：<br>四次循环，次次对前三位全排列，共4次……</li>
-</ul>
-<p>数学归纳法易证该算法对目标数组进行全排列。</p>
-<p><strong>时间效率</strong>：<br>对任意数组进行全排列，共有n（n-1）种可能。即进行n（n-1）次输出。初次输出之前不交换。最后一次输出之后交换。<br>故进行n（n-1）次交换，所以时间效率为n（n-1）近似为n^2.</p>
-
-        </div>
-      </div>
     </div>
   </div>
-</article>
+</div>
+<!-- Pagination -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-md-10 col-md-offset-1">
+      <ul class="pagination">
+          
+          
+      </ul>
+    </div>
+  </div>
+</div>
 
 
 
